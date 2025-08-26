@@ -1,9 +1,6 @@
-import { AvatarComponent } from "../Avatar";
-
 export function TextoApresentacao() {
   return (
     <div className="flex flex-col items-center justify-center ">
-      <AvatarComponent />
       <h2 className="text-white text-2xl font-bold">
         Olá, sou o Guilherme, <br />
         <span className="bg-gradient-text">Desenvolvedor Front-End</span>
