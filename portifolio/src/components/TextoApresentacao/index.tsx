@@ -39,7 +39,7 @@ export function TextoApresentacao() {
         práticas de desenvolvimento.
       </p>
 
-      <div className="flex flex-col items-center justify-center mt-4">
+      <div className="flex flex-col items-center justify-center mt-14">
         {!isLoading ? (
           <Button
             onClick={() => setShouldDownload(true)}
