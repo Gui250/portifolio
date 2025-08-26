@@ -34,7 +34,7 @@ export function TextoApresentacao() {
         <TypeAnimation
           sequence={[
             // Same substring at the start will only be typed out once, initially
-            "Desenvolvedor Front-End",
+            "Desenvolvedor Full Stack",
             1000,
             "Engenheiro de Software",
             1000,
