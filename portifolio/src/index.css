@@ -44,6 +44,7 @@
   --font-jakarta: "Plus Jakarta Sans", sans-serif;
   --font-poppins: "Poppins", sans-serif;
   --main-background: #161513;
+  --gradient: linear-gradient(180deg, #ff8660 0%, #d5491d 100%);
 }
 
 :root {

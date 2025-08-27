@@ -1,4 +1,5 @@
 import { AvatarComponent } from "../Avatar";
+import { Projetos } from "../Projetos";
 import { TextoApresentacao } from "../TextoApresentacao";
 import { Tecnologies } from "../Tecnologies";
 import logoReact from "../../assets/reactjs.svg";
@@ -19,6 +20,7 @@ export function Main() {
         <Tecnologies link={logoHtml} description="HTML" />
         <Tecnologies link={logoCss} description="CSS" />
       </div>
+      <Projetos />
     </main>
   );
 }
