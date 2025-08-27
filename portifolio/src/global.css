@@ -1,3 +1,16 @@
 body {
   background-color: #161513;
 }
+
+/* Melhorias para o carrossel no mobile */
+@media (max-width: 768px) {
+  .overflow-hidden {
+    overflow: hidden !important;
+  }
+  
+  /* Garantir que as imagens sejam visíveis no mobile */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
