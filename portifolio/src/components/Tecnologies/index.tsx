@@ -1,5 +1,4 @@
-import { motion } from "motion/react";
-import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import logoReact from "../../assets/reactjs.svg";
 import logoJavascript from "../../assets/javascript.svg";
 import logoHtml from "../../assets/html.svg";
@@ -12,11 +11,11 @@ type TecnologiesProps = {
 
 export function Tecnologies({ link, description }: TecnologiesProps) {
   return (
-    <div className="flex items-center justify-center min-w-[120px]">
+    <div className="flex items-center justify-center min-w-[80px] md:min-w-[120px]">
       <img
         src={link}
         alt={description}
-        className="w-16 h-16 object-contain transition-transform hover:scale-110"
+        className="w-12 h-12 md:w-16 md:h-16 object-contain transition-transform hover:scale-110"
       />
     </div>
   );
@@ -24,43 +23,33 @@ export function Tecnologies({ link, description }: TecnologiesProps) {
 
 // Componente container para o carrossel
 export function TecnologiesCarousel() {
-  const [scrollPosition, setScrollPosition] = useState(0);
-
-  const technologies = [
-    { link: logoReact, description: "React" },
-    { link: logoJavascript, description: "Javascript" },
-    { link: logoHtml, description: "HTML" },
-    { link: logoCss, description: "CSS" },
-
+  const baseTechnologies = [
     { link: logoReact, description: "React" },
     { link: logoJavascript, description: "Javascript" },
     { link: logoHtml, description: "HTML" },
     { link: logoCss, description: "CSS" },
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setScrollPosition((prev) => {
-        const newPosition = prev + 0.2; // Movimento ainda mais suave
-        // Reset quando chegar ao final para criar loop infinito
-        if (newPosition >= 12.5) {
-          // Ajustado para o novo conjunto de tecnologias
-          return 0;
-        }
-        return newPosition;
-      });
-    }, 20); // Atualização mais frequente para movimento mais suave
-
-    return () => clearInterval(interval);
-  }, []);
+  const technologies = [
+    ...baseTechnologies,
+    ...baseTechnologies,
+    ...baseTechnologies,
+  ];
 
   return (
     <div className="relative w-full overflow-hidden">
       <motion.div
-        className="flex gap-16 items-center"
-        style={{
-          transform: `translateX(-${scrollPosition}%)`,
-          transition: "transform 0.05s linear",
+        className="flex gap-8 md:gap-16 items-center"
+        animate={{
+          x: [0, -1000],
+        }}
+        transition={{
+          x: {
+            repeat: Infinity,
+            repeatType: "loop",
+            duration: 20,
+            ease: "linear",
+          },
         }}
       >
         {technologies.map((tech, index) => (
