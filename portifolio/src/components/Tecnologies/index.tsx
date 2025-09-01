@@ -21,7 +21,6 @@ export function Tecnologies({ link, description }: TecnologiesProps) {
   );
 }
 
-// Componente container para o carrossel
 export function TecnologiesCarousel() {
   const baseTechnologies = [
     { link: logoReact, description: "React" },
