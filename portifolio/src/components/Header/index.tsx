@@ -16,8 +16,8 @@ import { Menu } from "lucide-react";
 
 export function Header() {
   return (
-    <div className="flex py-(--padding-top-bottom)  bg-(--color-header) text-white items-center justify-center font-(--font-jakarta)">
-      <div className="flex items-center justify-center gap-64 sm:px-4 py-4">
+    <div className="flex py-(--padding-top-bottom) bg-(--color-header) text-white items-center justify-center font-(--font-jakarta) px-4 sm:px-6 lg:px-8">
+      <div className="flex items-center justify-center gap-8 sm:gap-16 md:gap-32 lg:gap-64 w-full max-w-7xl">
         <TypographyH1 text="Guilherme Moreno" />
 
         {/* Navigation Menu - Visível apenas em telas >= 640px */}
