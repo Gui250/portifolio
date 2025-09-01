@@ -20,7 +20,7 @@ export function Projetos() {
         <ProjectCard
           title="Mundo Pet"
           description="Um sistema de agendamento de consultas para pet shops, desenvolvido com Webpack, Babel e Typescript"
-          link="https://mundo-pet-1okq.vercel.app/"
+          link="https://mundo-pet-phi.vercel.app/"
         />
       </div>
     </section>
